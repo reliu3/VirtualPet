@@ -1,8 +1,11 @@
-
 void setup(){
-  //some of your code here
+  size(750,750);
+  background(24, 38, 79);
+  noStroke();
 }
 void draw(){
-  //more of your code here
-}
+  fill(166, 163, 184);
+  arc(375,375,425,470,PI,6.28319);
+  bezier(238.75,375, 140,412.5, 263, 534, 122, 640);
 
+}
