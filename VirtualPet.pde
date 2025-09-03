@@ -1,9 +1,17 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
 void setup(){
   size(750,750);
+  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
   background(24, 38, 79);
   noStroke();
 }
 void draw(){
+  int x = arduino.analogRead(5);
+  background(x/4, x/2, x);
+  
   fill(166, 163, 184);
   arc(375,375,425,470,PI,6.28319);
   ellipse(375,375,425,100);
